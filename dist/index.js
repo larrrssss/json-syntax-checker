@@ -111,11 +111,11 @@ const utils_1 = __nccwpck_require__(918);
                 });
             }
         }
+        core.setOutput('failed_files', failedFiles.length ? failedFiles.map((f) => f.path) : []);
         if (failedFiles.length) {
             const errorMessage = failedFiles.reduce((p, c) => `${p}${c.path}: ${c.error}\n`, '');
-            core.info(`failed_files: ${errorMessage}`);
+            core.setFailed(errorMessage);
         }
-        core.setOutput('failed_files', failedFiles.length ? failedFiles.map((f) => f.path) : []);
     }
     catch (error) {
         if (error instanceof Error)
