@@ -29,6 +29,7 @@ jobs:
       - name: Syntax Check
         uses: larrrssss/json-syntax-checker@v1.0.0
         with:
+          workspace: ${{ github.workspace }}
           base: '/'
           check_recursively: true
 ```
