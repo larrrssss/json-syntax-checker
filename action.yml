@@ -1,0 +1,21 @@
+name: 'JSON Syntax Checker'
+description: 'Check all .json files for the correct format'
+author: 'larrrssss'
+inputs:
+  workspace:
+    required: true
+    description: 'Github $GITHUB_WORKSPACE variable'
+  base:
+    required: false
+    description: 'Change the base path for all paths'
+    default: '/'
+  check_recursively:
+    required: false
+    description: 'Whether all nested paths should be checked recursively'
+    default: true
+outputs:
+  failed_files:
+    description: 'A list of invalid .json files'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

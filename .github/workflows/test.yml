@@ -1,0 +1,13 @@
+name: Self Test
+
+on:
+  push:
+
+jobs:
+  self_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: ./
+        with:
+          base: '/test'
