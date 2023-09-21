@@ -1,6 +1,6 @@
 {
   "name": "json-syntax-checker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "GitHub Action to check all .json files for the correct format",
   "main": "lib/main.js",
